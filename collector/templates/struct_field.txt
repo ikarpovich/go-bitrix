@@ -1,0 +1,1 @@
+    #GO_NAME# #GO_TYPE# `json:"#BITRIX_NAME#"`

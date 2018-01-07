@@ -1,0 +1,18 @@
+{
+    "name": "ikarpovich/go-bitrix",
+    "description": "Bitrix24 REST Api in Go",
+    "type": "library",
+    "require": {
+        "notamedia/console-jedi": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {"GoBitrix\\": "src/"}
+    },
+    "license": "GPLv3",
+    "authors": [
+        {
+            "name": "Igor Karpovich",
+            "email": "igor@karpovich.me"
+        }
+    ]
+}

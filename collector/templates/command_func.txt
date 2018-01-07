@@ -1,0 +1,4 @@
+func (c *Client) #COMMAND#(data interface{}) {
+
+}
+

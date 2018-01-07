@@ -1,0 +1,5 @@
+package #MODULE#
+#IMPORTS#
+struct #STRUCT_NAME# {
+#FIELDS#
+}
