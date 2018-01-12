@@ -1,5 +1,5 @@
 package #MODULE#
 #IMPORTS#
-struct #STRUCT_NAME# {
+type #STRUCT_NAME# struct {
 #FIELDS#
 }
