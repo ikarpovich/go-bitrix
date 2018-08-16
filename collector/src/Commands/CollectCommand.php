@@ -37,8 +37,8 @@ class CollectCommand extends BitrixCommand
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        //$methodsCollector = new Collectors\Methods();
-        //$methodsCollector->collect($input->getArgument("methodsPath"));
+        $methodsCollector = new Collectors\Methods();
+        $methodsCollector->collect($input->getArgument("methodsPath"));
 
         $structsCollector = new Collectors\Structs();
         $structsCollector->collect($input->getArgument("structsPath"));

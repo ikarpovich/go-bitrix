@@ -1,4 +1,5 @@
-func (c *Client) #COMMAND#(data interface{}) {
-
+func (c *Client) #COMMAND_FUNCTION#(data interface{}) (*types.Response, error) {
+	resp, err := c.DoRaw("#COMMAND#", data, &types.Response{})
+	return resp.Result().(*types.Response), err
 }
 

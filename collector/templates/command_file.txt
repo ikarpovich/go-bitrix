@@ -1,3 +1,5 @@
 package client
 
+import "github.com/ikarpovich/go-bitrix/types"
+
 #FUNCTIONS#

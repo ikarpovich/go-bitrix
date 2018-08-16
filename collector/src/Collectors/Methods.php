@@ -58,9 +58,11 @@ class Methods {
                 }
 
                 $funcString .= str_replace([
-                    '#COMMAND#'
+                    '#COMMAND_FUNCTION#',
+                    '#COMMAND#',
                 ], [
-                    $commandName
+                    $commandName,
+                    join(".", $command)
                 ], $templateFunc);
             }
 
