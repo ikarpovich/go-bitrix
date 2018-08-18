@@ -16,9 +16,9 @@ type BlockFields struct {
 
 type BlockManifest struct {
 	Assets *BlockManifestAssets `json:"assets" url:"assets"`
-	Nodes map[string]*BlockManifestNode
-	Style map[string]*BlockManifestStyle
-	Attrs map[string]*BlockManifestAttr
+	Nodes map[string]*BlockManifestNode `json:"nodes" url:"nodes"`
+	Style map[string]*BlockManifestStyle `json:"style" url:"style"`
+	Attrs map[string]*BlockManifestAttr `json:"attrs" url:"attrs"`
 }
 
 type BlockManifestAssets struct {
