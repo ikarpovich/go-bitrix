@@ -9,7 +9,7 @@ import (
 	"github.com/asaskevich/govalidator"
 	"strconv"
 	"crypto/tls"
-	"github.com/google/go-querystring/query"
+	"github.com/appscode/go-querystring/query"
 	"github.com/ikarpovich/go-bitrix/types"
 )
 

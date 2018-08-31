@@ -2,20 +2,20 @@
 
 
 [[projects]]
+  branch = "master"
+  digest = "1:aad8b2df9f6bced2c68875f736c5f3f86c227a64c3181caaa018cc789105f638"
+  name = "github.com/appscode/go-querystring"
+  packages = ["query"]
+  pruneopts = "UT"
+  revision = "0126cfb3f1dc04c68153a509c79e769ecb419a42"
+
+[[projects]]
   digest = "1:320e7ead93de9fd2b0e59b50fd92a4d50c1f8ab455d96bc2eb083267453a9709"
   name = "github.com/asaskevich/govalidator"
   packages = ["."]
   pruneopts = "UT"
   revision = "ccb8e960c48f04d6935e72476ae4a51028f9e22f"
   version = "v9"
-
-[[projects]]
-  branch = "master"
-  digest = "1:a63cff6b5d8b95638bfe300385d93b2a6d9d687734b863da8e09dc834510a690"
-  name = "github.com/google/go-querystring"
-  packages = ["query"]
-  pruneopts = "UT"
-  revision = "53e6ce116135b80d037921a7fdd5138cf32d7a8a"
 
 [[projects]]
   digest = "1:40e195917a951a8bf867cd05de2a46aaf1806c50cf92eebf4c16f78cd196f747"
@@ -71,8 +71,8 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
+    "github.com/appscode/go-querystring/query",
     "github.com/asaskevich/govalidator",
-    "github.com/google/go-querystring/query",
     "github.com/pkg/errors",
     "gopkg.in/resty.v1",
   ]

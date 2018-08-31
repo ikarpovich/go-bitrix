@@ -18,12 +18,12 @@ func main() {
 
 	resp, err := c.LandingRepoRegister(&landing.RepoRegisterRequest{
 		Code: "test_block",
-		Fields: &landing.BlockFields{
+		Fields: landing.BlockFields{
 			Name: "Test Block",
 			Content: "<div><It works!/div>",
 			Sections: "menu",
 		},
-		Manifest: &landing.BlockManifest{},
+		Manifest: landing.BlockManifest{},
 	})
 
 	if err != nil {
