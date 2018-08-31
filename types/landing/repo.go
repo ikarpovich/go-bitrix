@@ -2,8 +2,8 @@ package landing
 
 type RepoRegisterRequest struct {
 	Code string `json:"code" url:"code"`
-	Fields *BlockFields `json:"fields" url:"fields"`
-	Manifest *BlockManifest `json:"manifest" url:"manifest"`
+	Fields BlockFields `json:"fields" url:"fields"`
+	Manifest BlockManifest `json:"manifest" url:"manifest"`
 }
 
 type BlockFields struct {
@@ -15,10 +15,10 @@ type BlockFields struct {
 }
 
 type BlockManifest struct {
-	Assets *BlockManifestAssets `json:"assets" url:"assets"`
-	Nodes map[string]*BlockManifestNode `json:"nodes" url:"nodes"`
-	Style map[string]*BlockManifestStyle `json:"style" url:"style"`
-	Attrs map[string]*BlockManifestAttr `json:"attrs" url:"attrs"`
+	Assets BlockManifestAssets `json:"assets" url:"assets"`
+	Nodes map[string]BlockManifestNode `json:"nodes" url:"nodes"`
+	Style map[string]BlockManifestStyle `json:"style" url:"style"`
+	Attrs map[string]BlockManifestAttr `json:"attrs" url:"attrs"`
 }
 
 type BlockManifestAssets struct {
@@ -79,22 +79,22 @@ type BlockManifestAttrValueRange struct {
 
 type BlockManifestAttrImage struct {
 	BlockManifestAttr
-	Value *BlockManifestAttrValueImage `json:"value" url:"value"`
+	Value BlockManifestAttrValueImage `json:"value" url:"value"`
 }
 
 type BlockManifestAttrIcon struct {
 	BlockManifestAttr
-	Value *BlockManifestAttrValueIcon `json:"value" url:"value"`
+	Value BlockManifestAttrValueIcon `json:"value" url:"value"`
 }
 
 type BlockManifestAttrLink struct {
 	BlockManifestAttr
-	Value *BlockManifestAttrValueLink `json:"value" url:"value"`
+	Value BlockManifestAttrValueLink `json:"value" url:"value"`
 }
 
 type BlockManifestAttrRange struct {
 	BlockManifestAttr
-	Value *BlockManifestAttrValueRange `json:"value" url:"value"`
+	Value BlockManifestAttrValueRange `json:"value" url:"value"`
 }
 
 type BlockManifestAttrText struct {
