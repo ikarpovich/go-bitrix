@@ -1,14 +1,16 @@
 package client
 
-import "github.com/ikarpovich/go-bitrix/types"
-import "github.com/ikarpovich/go-bitrix/types/landing"
+import (
+	"github.com/ikarpovich/go-bitrix/types/landing"
+	"github.com/ikarpovich/go-bitrix/types"
+)
 
 func (c *Client) LandingRepoRegister(request *landing.RepoRegisterRequest) (*types.IntResponse, error) {
-	resp, err := c.DoRaw("landing.repo.register", request, &types.IntResponse{})
+	resp, err := c.DoRaw("landing.repo.register", request, &types.Response{})
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.IntResponse), err
+	return resp.Result().(*types.Response).ToInt()
 }
 
 func (c *Client) LandingRepoUnregister(data interface{}) (*types.Response, error) {
@@ -16,7 +18,7 @@ func (c *Client) LandingRepoUnregister(data interface{}) (*types.Response, error
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp.Result().(*types.Response), nil
 }
 
 func (c *Client) LandingRepoGetappinfo(data interface{}) (*types.Response, error) {
@@ -24,6 +26,6 @@ func (c *Client) LandingRepoGetappinfo(data interface{}) (*types.Response, error
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp.Result().(*types.Response), nil
 }
 

@@ -20,7 +20,7 @@ func main() {
 		Code: "test_block",
 		Fields: landing.BlockFields{
 			Name: "Test Block",
-			Content: "<div><It works!/div>",
+			Content: "<div><It works!</div>",
 			Sections: "menu",
 		},
 		Manifest: landing.BlockManifest{},

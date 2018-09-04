@@ -4,6 +4,7 @@ import (
 	"time"
 	"strconv"
 	"math"
+	"github.com/pkg/errors"
 )
 
 type Response struct {
@@ -58,4 +59,25 @@ type IntResponse struct {
 type StringResponse struct {
 	Response
 	Result string `json:"result"`
+}
+
+func (r *Response) ToInt() (*IntResponse, error) {
+	res := &IntResponse{
+		Response: *r,
+	}
+	if i, ok := r.Result.(float64); ok {
+		res.Result = int64(i)
+	} else if i, ok := r.Result.(int64); ok {
+		res.Result = i
+	} else if s, ok := r.Result.(string); ok {
+		var err error
+		res.Result, err = strconv.ParseInt(s, 10, 0)
+		if err != nil {
+			return nil, errors.Wrap(err, "Can't cast string response to int")
+		}
+	} else {
+		return nil, errors.New("Can't cast string response to int")
+	}
+
+	return res, nil
 }
