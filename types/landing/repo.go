@@ -7,11 +7,11 @@ type RepoRegisterRequest struct {
 }
 
 type BlockFields struct {
-	Name string `json:"NAME" url:"NAME"`
-	Description string `json:"DESCRIPTION" url:"DESCRIPTION"`
-	Sections string `json:"SECTIONS" url:"SECTIONS"`
-	Preview string `json:"PREVIEW" url:"PREVIEW"`
-	Content string `json:"CONTENT" url:"CONTENT"`
+	Name string `json:"name" url:"NAME"`
+	Description string `json:"description" url:"DESCRIPTION"`
+	Sections string `json:"sections" url:"SECTIONS"`
+	Preview string `json:"preview" url:"PREVIEW"`
+	Content string `json:"content" url:"CONTENT"`
 }
 
 type BlockManifest struct {
