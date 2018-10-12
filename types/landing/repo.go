@@ -18,7 +18,7 @@ type BlockManifest struct {
 	Assets BlockManifestAssets `json:"assets" url:"assets"`
 	Nodes map[string]BlockManifestNode `json:"nodes" url:"nodes"`
 	Style map[string]BlockManifestStyle `json:"style" url:"style"`
-	Attrs map[string][]BlockManifestAttr `json:"attrs" url:"attrs"`
+	Attrs map[string]map[string]BlockManifestAttr `json:"attrs" url:"attrs"`
 }
 
 type BlockManifestAssets struct {
